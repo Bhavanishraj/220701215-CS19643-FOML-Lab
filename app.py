@@ -33,7 +33,7 @@ if uploaded_file is not None:
 
         # Gender Prediction
         gender_pred = gender_model.predict(features[:, :20])[0]  # Use first 20 features
-        gender = "Female 👩" if gender_pred == 1 else "Male 👨"
+        gender = "Female 👩" if gender_pred == 0 else "Male 👨"
 
         # Sentiment Prediction
         sentiment_pred = emotion_model.predict(features)[0]
